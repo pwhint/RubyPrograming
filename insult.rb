@@ -4,11 +4,11 @@
 #that will take a random adjetive and somethingthatIcannotremember to make an
 #insult. Have fun!
 
-adj = ["pathetic", "stinky", "slobery", "cowardly", "slow", "smelly", "buttery",
-       "slimy", "orange", "green", "blue", "confused", "plastic", "polka-dot",
-       "purple pickled", "lily-livered", "skunk-like", "empty-headed", "obese", "thick-headed", "useless", "procrastinating"]
+adj = ["pathetic", "stinky", "slobery", "cowardly", "slow", "smelly", "buttery", "flat", 
+       "slimy", "orange", "green", "blue", "confused", "plastic", "polka-dot", "sticky", "failed", "loopy", 
+       "purple pickled", "lily-livered", "skunk-like", "empty-headed", "obese", "thick-headed", "useless", "procrastinating", "little", "puny", ]
 noun = ["penguin", "telescope", "lighthouse", "umbrella", "bannana", "hammer", "plastic fire engine", "eric", "platypus", "ant", "mushroom", "elderberry",
-       "mullberry", "person"]
+       "mullberry", "person", "lobster", "bottle", "paper", "blob", "lammas", "backpack", "dragon", "skunk", "refrigerator"]
 
 puts "What is your name?"
 
