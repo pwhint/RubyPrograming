@@ -1,0 +1,6 @@
+##Peter Hinton
+#This is my second ruby program, I will have the user enter a number for the amount of sides of the die, and then have it roll it. I might
+#go on to changing the amount of dice too.
+
+puts "Pick the amount of sides you want on your die!"
+
