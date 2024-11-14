@@ -15,29 +15,45 @@ while true
   dificulty = gets.chomp.downcase
 
   if dificulty == "easy"
-    unscrabled = easy_words.sample
+    unscrambled = easy_words.sample
     scrambled = unscrambled.chars.shuffle.join
-    puts "What do you think this word is: #{unscrambled}?"
+    puts "What do you think this word is: #{scrambled}?"
     answer = gets.chomp.downcase
-    if answer == unscrabled
+    if answer == unscrambled
       puts "You got it right! Do you want to try again?"
-      user_input = gets.chomp.lower
+      user_input = gets.chomp.downcase
       if user_input != "yes"
         break
-
-      end #the end for the continue question.
-    end #seeing if the answer is correct.
-  end
-  elsif dificulty == "medium"
-    puts "nothing"
-  end
-    
-  elsif dificulty == "hard"
-    puts "nothing"
+      end
+    end
   end
 
-
-    
-  else
-    puts "What are you doing with your life?"
+  if dificulty == "medium"
+    unscrambled = med_words.sample
+    scrambled = unscrambled.chars.shuffle.join
+    puts "What do you think this word is: #{scrambled}?"
+    answer = gets.chomp.downcase
+    if answer == unscrambled
+      puts "You got it right! Do you want to try again?"
+      user_input = gets.chomp.downcase
+      if user_input != "yes"
+        break
+      end
+    end
   end
+
+  if dificulty == "hard"
+    unscrambled = hard_words.sample
+    scrambled = unscrambled.chars.shuffle.join
+    puts "What do you think this word is: #{scrambled}?"
+    answer = gets.chomp.downcase
+    if answer == unscrambled
+      puts "You got it right! Do you want to try again?"
+      user_input = gets.chomp.downcase
+      if user_input != "yes"
+        break
+      end
+    end
+  end
+  
+end

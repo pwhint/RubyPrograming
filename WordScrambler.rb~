@@ -1,0 +1,29 @@
+##Peter Hinton
+##This is a program where you have two options, to type a word, and have it scramble it for you, or have it pick a random word.
+##I probably will not make the word library very large, because I don't need to. I might have one of my siblings type in a word
+##for me to try and unscramble.
+
+##I will start with a user input word to scramble.
+
+words = ["unbelievable", "extraordinary", "unfortunate", "incompatible", "contemporary", "imagination", "celebrations", "unscrambled",
+"unsupportive", "disastrously"] ##Yes. I used AI for these...
+
+
+while true
+  puts "Here is a word for you to unscramble:"
+  unscrambled = words.sample
+  scramble = unscrambled.chars.shuffle.join
+
+  puts scramble
+
+  guess = gets.chomp
+
+  if guess == unscrambled
+    puts "You win! Again?"
+    answer = gets.chomp.downcase
+    if answer != "yes"
+      break
+    end
+  end
+end
+puts "Goodbye!!"
