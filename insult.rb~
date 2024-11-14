@@ -7,8 +7,8 @@
 adj = ["pathetic", "stinky", "slobery", "cowardly", "slow", "smelly", "buttery", "flat", 
        "slimy", "orange", "green", "blue", "confused", "plastic", "polka-dot", "sticky", "failed", "loopy", 
        "purple pickled", "lily-livered", "skunk-like", "empty-headed", "obese", "thick-headed", "useless", "procrastinating", "little", "puny", ]
-noun = ["penguin", "telescope", "lighthouse", "umbrella", "bannana", "hammer", "plastic fire engine", "platypus", "ant", "mushroom", "elderberry",
-       "mullberry", "person", "lobster", "bottle", "paper", "blob", "lamma", "backpack", "dragon", "skunk", "refrigerator"]
+noun = ["penguin", "telescope", "lighthouse", "umbrella", "bannana", "hammer", "plastic fire engine", "eric", "platypus", "ant", "mushroom", "elderberry",
+       "mullberry", "person", "lobster", "bottle", "paper", "blob", "lammas", "backpack", "dragon", "skunk", "refrigerator"]
 
 puts "What is your name?"
 

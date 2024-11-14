@@ -1,12 +1,13 @@
 ##Peter Hinton
 ##I plan to make a two player, (not vs. computer yet.) game of rock paper scissors. And by the end of it, I might not have to look up how to spell scissors
-##I am planning on learning how to use regex
+##I am planning on learning how to use regex I did not...
 require 'io/console'
 
 puts "Welcome to a game of rock paper scissors! No caps please. I am incompetent. Press \'E'\ to exit anytime"
 
 while true
-  puts "Player one's turn."
+  sleep(2)
+  puts "\nPlayer one's turn."
   player_one = IO::console.getpass
   if ["rock", "paper", "scissors"].include? player_one.downcase
     puts "You have made your choice..."
@@ -19,7 +20,7 @@ while true
   player_two = IO::console.getpass
   if ["rock", "paper", "scissors"].include? player_two.downcase
     puts "You have made your choice..."
-  elsif player_two.downcase == "e"
+  elsif player_one.downcase == "e"
     break
   else
     puts "What are you trying to do? Do you want me to tell the whole world?"
@@ -41,5 +42,6 @@ while true
   else
     puts "No one wins"
   end
+  puts "Player one picked #{player_one}, and player two picked #{player_two}"
  
 end
