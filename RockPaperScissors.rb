@@ -3,7 +3,7 @@
 ##I am planning on learning how to use regex I did not...
 require 'io/console'
 
-puts "Welcome to a game of rock paper scissors! No caps please. I am incompetent, Press \'E'\ to exit anytime"
+puts "Welcome to a game of rock paper scissors! No caps please, I am incompetent. Press \'E'\ to exit anytime"
 
 puts "Player one, what is your name?"
 player_uno = gets.chomp
@@ -15,6 +15,8 @@ player_dos = gets.chomp
 player_one_score = 0
 player_two_score = 0
 
+set = ["rock", "paper", "scissors"]
+
 while true
   sleep(2)
   puts "\n#{player_uno}\'s turn."
@@ -22,18 +24,18 @@ while true
   if ["rock", "paper", "scissors"].include? player_one.downcase
     puts "You have made your choice..."
   elsif player_one.downcase == "e"
-    break
+    exit
   else
-    puts "What are you trying to do? Do you want me to tell the whole world?"
+    puts "What about rock paper scissors do you not understand?"
   end
   puts "#{player_dos}. Your turn."
   player_two = IO::console.getpass
   if ["rock", "paper", "scissors"].include? player_two.downcase
     puts "You have made your choice..."
   elsif player_one.downcase == "e"
-    break
+    exit
   else
-    puts "What are you trying to do? Do you want me to tell the whole world?"
+    puts "What about rock paper scissors is unclear?"
   end
 
   ##This is probably the worst way to do it, but there we go.
