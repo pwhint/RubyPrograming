@@ -1,4 +1,23 @@
 ##Peter Hinton
 ##A short parsing file
 
-file_content = File.open.read.splitlines("diciotnary.txt")
+# Step 1: Open the file and read the contents
+file_path = 'dictionary.txt'
+words = []
+
+# Open the file and parse the contents
+File.open(file_path, 'r') do |file|
+  file.each_line do |line|
+    # Step 2: Remove any extra whitespace and append the word to the array
+    words << line.strip
+  end
+end
+
+# Step 3: Filter words that are exactly 10 letters long
+ten_letter_words = words.select { |word| word.length == 10 }
+
+# Step 4: Pick a random word from the filtered list
+random_word = ten_letter_words.sample
+
+# Step 5: Output the result
+puts random_word

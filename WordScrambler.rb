@@ -1,60 +1,80 @@
 ##Peter Hinton
-##This is a program where you have two options, to type a word, and have it scramble it for you, or have it pick a random word.
-##I probably will not make the word library very large, because I don't need to. I might have one of my siblings type in a word
-##for me to try and unscramble.
+##A short parsing file
 
-##I will start with a user input word to scramble.
+# Step 1: Open the file and read the contents
+file_path = 'dictionary.txt'
+words = []
 
-easy_words = ["apple", "stone", "grape", "light", "cloud", "heart", "brave", "sharp", "flame", "bloom"]
-med_words = ["journey", "capture", "freedom", "fantasy", "designs", "silence", "victory", "universe", "thunder", "mystery", "strength", "flavorful",
-             "respect", "journey", "circuit", "dancing", "success", "gathered", "explore", "decently"]
-hard_words = ["unbelievable", "extraordinary", "unfortunate", "incompatible", "contemporary", "imagination", "celebrations", "unscrambled",
-"unsupportive", "disastrously"] ##Yes. I used AI for these...
-
+# Open the file and parse the contents
+File.open(file_path, 'r') do |file|
+  file.each_line do |line|
+    # Step 2: Remove any extra whitespace and append the word to the array
+    words << line.strip
+  end
+end
 while true
-  puts "What dificulty do you want?"
-  dificulty = gets.chomp.downcase
+puts "What level do you want, easy, medium, or hard?"
 
-  if dificulty == "easy"
-    unscrambled = easy_words.sample
-    scrambled = unscrambled.chars.shuffle.join
-    puts "What do you think this word is: #{scrambled}?"
-    answer = gets.chomp.downcase
-    if answer == unscrambled
-      puts "You got it right! Do you want to try again?"
-      user_input = gets.chomp.downcase
-      if user_input != "yes"
-        break
-      end
-    end
-  end
-
-  if dificulty == "medium"
-    unscrambled = med_words.sample
-    scrambled = unscrambled.chars.shuffle.join
-    puts "What do you think this word is: #{scrambled}?"
-    answer = gets.chomp.downcase
-    if answer == unscrambled
-      puts "You got it right! Do you want to try again?"
-      user_input = gets.chomp.downcase
-      if user_input != "yes"
-        break
-      end
-    end
-  end
-
-  if dificulty == "hard"
-    unscrambled = hard_words.sample
-    scrambled = unscrambled.chars.shuffle.join
-    puts "What do you think this word is: #{scrambled}?"
-    answer = gets.chomp.downcase
-    if answer == unscrambled
-      puts "You got it right! Do you want to try again?"
-      user_input = gets.chomp.downcase
-      if user_input != "yes"
-        break
-      end
-    end
-  end
+answer = gets.chomp.downcase
+if answer == "easy"
+  five_letter_words = words.select { |word| word.length == 5 }
   
+  random_word = five_letter_words.sample
+
+  puts random_word.chars.shuffle.join
+
+  answer = gets.chomp.downcase
+  if answer == random_word
+    puts "Good job! You did it!"
+    puts "Do you want to try again?"
+    if gets.chomp.downcase != "yes"
+    else
+      exit
+    end
+  else
+    puts "You failed miserably. The word was #{random_word}."
+  end
+
+end
+
+if answer == "medium"
+  seven_letter_words = words.select { |word| word.length == 7 }
+  
+  random_word = seven_letter_words.sample
+
+  puts random_word.chars.shuffle.join
+
+  answer = gets.chomp.downcase
+  if answer == random_word
+    puts "Good job! You did it!"
+    puts "Do you want to try again?"
+    if gets.chomp.downcase != "yes"
+    else
+      exit
+    end
+  else
+    puts "You failed miserably. The word was #{random_word}."
+  end
+
+end
+
+if answer == "hard"
+  ten_letter_words = words.select { |word| word.length == 10 }
+  
+  random_word = ten_letter_words.sample
+
+  puts random_word.chars.shuffle.join
+
+  answer = gets.chomp.downcase
+  if answer == random_word
+    puts "Good job! You did it!"
+    puts "Do you want to try again?"
+    if gets.chomp.downcase != "yes"
+    else
+      exit
+    end
+  else
+    puts "You failed miserably. The word was #{random_word}."
+  end
+
 end
