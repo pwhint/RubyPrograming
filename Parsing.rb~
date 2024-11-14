@@ -1,0 +1,4 @@
+##Peter Hinton
+##A short parsing file
+
+file_content = File.open.read.splitlines("diciotnary.txt")

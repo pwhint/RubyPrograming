@@ -6,7 +6,8 @@
 ##I will start with a user input word to scramble.
 
 easy_words = ["apple", "stone", "grape", "light", "cloud", "heart", "brave", "sharp", "flame", "bloom"]
-med_words = ["journey", "capture", "freedom", "fantasy", "designs", "silence", "victory", "universe", "thunder", "mystery"]
+med_words = ["journey", "capture", "freedom", "fantasy", "designs", "silence", "victory", "universe", "thunder", "mystery", "strength", "flavorful",
+             "respect", "journey", "circuit", "dancing", "success", "gathered", "explore", "decently"]
 hard_words = ["unbelievable", "extraordinary", "unfortunate", "incompatible", "contemporary", "imagination", "celebrations", "unscrambled",
 "unsupportive", "disastrously"] ##Yes. I used AI for these...
 
